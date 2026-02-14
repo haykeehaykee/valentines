@@ -35,7 +35,7 @@
           flex-direction: column;
         "
       >
-        <p>
+        <p class="message">
           You make my days brighter and my heart happier. I just had to ask...
         </p>
         <p style="font-weight: bold; color: #ff4d88" class="question">
@@ -88,12 +88,14 @@
     const noMessage = document.querySelector(".noMessage");
     const tenorGif = document.querySelector(".tenor-gif-embed");
     const question = document.querySelector(".question");
+    const message = document.querySelector(".message");
     yesButton.addEventListener("click", (e) => {
       e.preventDefault();
       const newGif = document.createElement("img");
       newGif.src = "gif.gif";
       newGif.style.width = "30%";
-
+ message.innerHTML =
+        "You just made me the happiest person alive 💕 I can't wait to make more memories with you 💖";
       tenorGif.replaceWith(newGif);
       noMessage.innerHTML =
         "You answered YES! Call me please! 📞💕 I love you ";
@@ -114,3 +116,4 @@
     });
   </script>
 </html>
+
