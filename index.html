@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will you be my Valentine?</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div
+      class="tenor-gif-embed"
+      data-postid="16022705"
+      data-share-method="host"
+      data-aspect-ratio="0.93375"
+      data-width="15%"
+    >
+      <a href="https://tenor.com/view/erm-fingers-hmmm-cat-guilty-gif-16022705"
+        >Erm Fingers Sticker</a
+      >from <a href="https://tenor.com/search/erm-stickers">Erm Stickers</a>
+    </div>
+    <script
+      type="text/javascript"
+      async
+      src="https://tenor.com/embed.js"
+    ></script>
+    <div style="margin-top: -4px">
+      <div
+        style="
+          background: #ffffff;
+          padding: 20px;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <p>
+          You make my days brighter and my heart happier. I just had to ask...
+        </p>
+        <p style="font-weight: bold; color: #ff4d88" class="question">
+          Will you be my Valentine?
+        </p>
+        <div>
+          <a
+            href="#"
+            class="yes-btn"
+            style="
+              background: #ff4d88;
+              color: white;
+              padding: 15px 30px;
+              text-decoration: none;
+              border-radius: 25px;
+              font-weight: bold;
+              margin-right: 10px;
+              display: inline-block;
+            "
+          >
+            YES 💕
+          </a>
+
+          <a
+            href="#"
+            class="no-btn"
+            style="
+              background: #a37373;
+              color: #ffffff;
+              padding: 15px 30px;
+              text-decoration: none;
+              border-radius: 25px;
+              font-weight: bold;
+              display: inline-block;
+            "
+          >
+            NO 😢
+          </a>
+        </div>
+        <p class="noMessage" style="display: flex; justify-content: center"></p>
+        <p style="margin-top: 20px; font-size: 12px; color: #888888">
+          Made with ❤️ by Haykee
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const yesButton = document.querySelector(".yes-btn");
+    const noButton = document.querySelector(".no-btn");
+    const noMessage = document.querySelector(".noMessage");
+    const tenorGif = document.querySelector(".tenor-gif-embed");
+    const question = document.querySelector(".question");
+    yesButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      const newGif = document.createElement("img");
+      newGif.src = "gif.gif";
+      newGif.style.width = "30%";
+
+      tenorGif.replaceWith(newGif);
+      noMessage.innerHTML =
+        "You answered YES! Call me please! 📞💕 I love you ";
+      yesButton.style.disable = true;
+      noButton.style.disable = true;
+      yesButton.style.display = "none";
+      noButton.style.display = "none";
+      question.style.display = "none";
+    });
+
+    noButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      alert("Error occurred! Please try again.");
+      noMessage.innerHTML =
+        "Sorry... the NO button seems to be broken 😜 Please try YES instead 💕";
+
+      noButton.style.display = "none";
+    });
+  </script>
+</html>
